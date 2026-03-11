@@ -87,10 +87,30 @@ public partial class MainWindow : Window
         });
     }
 
+    public void DessinerCadre()
+    {
+        // Nettoie le canvas
+        TetrisCanvas.Children.Clear();
+
+        int width = (int)TetrisCanvas.Width;
+        int height = (int)TetrisCanvas.Height;
+        int border = 2; // épaisseur du cadre en pixels
+
+        // Fond blanc
+        DessinerRectangle(0, 0, width, height, Avalonia.Media.Brushes.White);
+
+        // Cadre noir (4 côtés)
+        DessinerRectangle(0, 0, width, border, Avalonia.Media.Brushes.Black); // haut
+        DessinerRectangle(0, height - border, width, border, Avalonia.Media.Brushes.Black); // bas
+        DessinerRectangle(0, 0, border, height, Avalonia.Media.Brushes.Black); // gauche
+        DessinerRectangle(width - border, 0, border, height, Avalonia.Media.Brushes.Black); // droite
+    }
+
     /*Cette fonction permet de démarrer le Jeu*/
     public void DemarrerInterface()
     {
         Console.WriteLine("Démarrage du jeu de Tetris à coder...");
+        DessinerCadre();
     }
 
     /*Cette fonction permet de déplacer le tétrominos à droite*/
