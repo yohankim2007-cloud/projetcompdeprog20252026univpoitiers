@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "TetrisIteration0", "index.html", [
+  [ "Tetris", "index.html", [
     [ "Espaces de nommage", "namespaces.html", [
       [ "Liste des espaces de nommage", "namespaces.html", "namespaces_dup" ]
     ] ],

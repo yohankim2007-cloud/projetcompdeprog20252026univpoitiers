@@ -42,6 +42,7 @@ public partial class MainWindow : Window
         Minuteur.Interval = TimeSpan.FromMilliseconds(500);
         Minuteur.Tick += (s, e) => { BasInterface();};   
         // détecte le clic sur le bouton Démarrer, déclanche l'évènement Demarrer, puis appelle la méthode DemarrerTetris
+        StartButton.Click += (s, e) => { DessinerCadre();};
         StartButton.Click += (s, e) => { DemarrerInterface();};
         // détecte le clic sur le bouton Quitter, déclanche l'évènement Quiter, puis ferme la fenêtre
         QuitButton.Click += (s, e) => { Close();};
@@ -87,46 +88,50 @@ public partial class MainWindow : Window
         });
     }
 
-    /*Cette fonction permet de démarrer le Jeu*/
+    /* ... */
     public void DemarrerInterface()
     {
         Console.WriteLine("Démarrage du jeu de Tetris à coder...");
     }
 
-    /*Cette fonction permet de déplacer le tétrominos à droite*/
+    /* ... */
     public void DroiteInterface()
     {
         Console.WriteLine("Déplacement à droite à coder...");
     }
 
-    /*Cette fonction permet de déplacer le tétrominos à gauche*/
+    /* ... */
     public void GaucheInterface()
     {
         Console.WriteLine("Déplacement à gauche à coder...");
     }
 
-    /*Cette fonction permet de forcer le déplacement du tétrominos vers le bas*/
+    /* ... */
     public void BasInterface()
     {
         Console.WriteLine("Déplacement en bas à coder...");
     }
 
-    /*Cette fonction permet de forcer le déplacement du tétrominos vers le bas*/
+    /* ... */
     public void TombeInterface()
     {
         Console.WriteLine("Déplacement rapide en bas à coder...");
 
     }
 
-    /*Cette fonction permet de faire une rotation du tétrominos vers la droite*/
+    /* ... */
     public void RotationDroiteInterface()
     {
         Console.WriteLine("Rotation à droit à coder...");
     }
 
-    /*Cette fonction permet de faire une rotation du tétrominos vers la gauche*/
+    /* ... */
     public void RotationGaucheInterface()
     {
         Console.WriteLine("Rotation à gauche à coder...");
+    }
+    public void DessinerCadre()
+    {
+        DessinerRectangle(10,0,180,390,Avalonia.Media.Brushes.White);
     }
 }
