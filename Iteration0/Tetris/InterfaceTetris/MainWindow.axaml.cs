@@ -11,7 +11,7 @@ using Avalonia.Input;
 using System;
 using Avalonia.Threading;
 // à ajouter à partir de l'itération 1
-//using NoyauTetris;
+using NoyauTetris;
 
 namespace InterfaceTetris;
 
