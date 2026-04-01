@@ -16,5 +16,5 @@ public class JeuTetris
     {
         DessinerRectangle(10,0,180,390,Avalonia.Media.Brushes.White);
     }
-    
+
 }
